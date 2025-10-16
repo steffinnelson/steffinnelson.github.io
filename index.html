@@ -1,25 +1,159 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Steffin Kannampuzha Nelson | AI Engineer</title>
-  </head>
-  <body style="font-family:sans-serif; background-color:#f4f4f4; color:#333; text-align:center;">
-    <h1>Hi, I'm Steffin Kannampuzha Nelson </h1>
-    <p>AI Engineer | Deep Learning • Computer Vision • Edge AI • LLMs</p>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Steffin Kannampuzha Nelson • AI Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0e14; --bg-soft:#121725; --card:#161b2e;
+      --text:#e7ecff; --muted:#a9b3d1; --accent:#5dd6ff; --accent2:#7c5cff;
+      --ring: 0 0 0 2px rgba(93,214,255,.35);
+      --radius:16px; --shadow:0 10px 30px rgba(0,0,0,.4);
+    }
+    *{box-sizing:border-box} html,body{margin:0;padding:0;scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:
+      radial-gradient(1200px 600px at 10% -10%,rgba(124,92,255,.25),transparent 60%),
+      radial-gradient(1000px 500px at 110% 20%,rgba(93,214,255,.18),transparent 60%),
+      var(--bg); color:var(--text)}
+    .wrap{max-width:1024px;margin:0 auto;padding:24px}
+    /* NAV */
+    .nav{position:sticky;top:0;backdrop-filter:saturate(180%) blur(10px);
+      background:linear-gradient(180deg,rgba(11,14,20,.9),rgba(11,14,20,.65));
+      border-bottom:1px solid rgba(255,255,255,.06); z-index:50}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{font-weight:800;letter-spacing:.2px}
+    .nav a{color:var(--muted);text-decoration:none;margin-left:14px}
+    .nav a:hover{color:var(--text)}
+    /* HERO */
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:56px 0}
+    .pill{display:inline-flex;gap:8px;align-items:center;font-size:12px;color:var(--muted);
+      background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);padding:6px 10px;border-radius:999px}
+    h1{font-size:44px;line-height:1.1;margin:14px 0 8px}
+    .tag{color:var(--muted);max-width:55ch}
+    .cta{display:flex;gap:12px;margin-top:16px;flex-wrap:wrap}
+    .btn{padding:12px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.12);
+      background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02)); color:var(--text);
+      text-decoration:none;font-weight:600}
+    .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));border:none;color:#081018}
+    .btn:hover{box-shadow:var(--ring)}
+    .pfp{width:220px;height:220px;border-radius:20px;background:linear-gradient(135deg,rgba(124,92,255,.4),rgba(93,214,255,.4));
+      display:grid;place-items:center;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.12)}
+    .pfp img{width:210px;height:210px;object-fit:cover;border-radius:16px}
+    /* SECTION */
+    section{margin:18px 0 56px}
+    .section-title{font-size:20px;color:var(--muted);margin-bottom:12px}
+    /* SKILLS */
+    .chips{display:flex;flex-wrap:wrap;gap:10px}
+    .chip{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.1);color:var(--text);font-size:13px}
+    /* PROJECTS */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);
+      padding:18px;box-shadow:var(--shadow);transition:transform .15s ease, box-shadow .2s ease}
+    .card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.55)}
+    .card h3{margin:0 0 8px;font-size:18px}
+    .card p{margin:0 0 12px;color:var(--muted)}
+    .meta{font-size:12px;color:#bcd7ff}
+    /* CONTACT */
+    .contact{display:flex;flex-wrap:wrap;gap:10px}
+    .contact a{color:var(--text);text-decoration:none}
+    .footer{color:var(--muted);border-top:1px solid rgba(255,255,255,.08);padding:22px 0;margin-top:40px}
+    /* RESPONSIVE */
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.pfp{justify-self:center}.grid{grid-template-columns:1fr 1fr}}
+    @media (max-width:620px){h1{font-size:34px}.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <div class="nav">
+    <div class="wrap nav-inner">
+      <div class="brand">Steffin • AI Engineer</div>
+      <div>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
 
-    <h2>About Me</h2>
-    <p>MSc Electromobility student @ FAU Erlangen. I build AI systems for robotics, automation, and computer vision.</p>
+  <main class="wrap">
+    <!-- HERO -->
+    <section class="hero" id="about">
+      <div>
+        <span class="pill">FAU FAPS • Research Assistant</span>
+        <h1>Deep Learning, Vision & Edge AI for Industrial Automation</h1>
+        <p class="tag">
+          I build intelligent systems for robotic disassembly and visual inspection: object detection,
+          6D pose estimation, active learning & ensembles. Also hands-on with LLM/GenAI workflows and edge/federated learning.
+        </p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#projects">See projects</a>
+          <a class="btn" href="mailto:steffin.nelson@fau.de">Contact me</a>
+          <a class="btn" href="https://www.linkedin.com/in/steffin-k-nelson" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn" href="https://github.com/steffinnelson18-fau-erlangen-n-rnberg" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+      <div class="pfp">
+        <!-- Optional: drop your photo into the repo as profile.jpg and uncomment -->
+        <!-- <img src="profile.jpg" alt="Steffin"> -->
+        <span></span>
+      </div>
+    </section>
 
-    <h2>Projects</h2>
-    <ul style="list-style:none;">
-      <li><b>Control Cabinet Disassembly:</b> Deep learning system using YOLOv11, Co-DETR & Co-DINO</li>
-      <li><b>6D Object Pose Estimation:</b> RGB-D pipeline using FoundationPose + Intel RealSense</li>
-      <li><b>LLM Automation:</b> LangGraph + LLaMA3 multi-agent document system</li>
-    </ul>
+    <!-- SKILLS -->
+    <section>
+      <div class="section-title">Core skills</div>
+      <div class="chips">
+        <span class="chip">PyTorch</span><span class="chip">TensorFlow</span>
+        <span class="chip">YOLOv11</span><span class="chip">Co-DETR</span><span class="chip">Co-DINO</span>
+        <span class="chip">FoundationPose</span><span class="chip">Active Learning</span>
+        <span class="chip">Ensemble Learning</span><span class="chip">ROS</span>
+        <span class="chip">LangGraph</span><span class="chip">LLaMA3</span>
+        <span class="chip">SplitNN</span><span class="chip">gRPC</span><span class="chip">FastAPI</span>
+      </div>
+    </section>
 
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:steffin.nelson@fau.de">steffin.nelson@fau.de</a></p>
-    <p>GitHub: <a href="https://github.com/steffinnelson">My GitHub</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/steffin-k-nelson">My LinkedIn</a></p>
-  </body>
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="section-title">Featured projects</div>
+      <div class="grid">
+        <article class="card">
+          <h3>Automated Control Cabinet Disassembly</h3>
+          <p>Unified detection with YOLOv11-L, Co-DETR & Co-DINO. Active learning pruned redundant samples (~40%) with strong mAP50–95.</p>
+          <div class="meta">CV • Object Detection • Ensemble • AL</div>
+        </article>
+
+        <article class="card">
+          <h3>6D Object Pose for Robotics</h3>
+          <p>RGB-D pipeline using NVIDIA FoundationPose + Intel RealSense D405 for clip localization and tool alignment; ROS integration.</p>
+          <div class="meta">6D Pose • RGB-D • ROS</div>
+        </article>
+
+        <article class="card">
+          <h3>LLM & Edge AI Automation</h3>
+          <p>LangGraph + LLaMA3 multi-agent document pipeline. SplitNN/TinyFL on Raspberry Pi for federated edge learning.</p>
+          <div class="meta">LLM • Edge • Federated</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-title">Contact</div>
+      <div class="contact">
+        <a class="btn" href="mailto:steffin.nelson@fau.de"> steffin.nelson@fau.de</a>
+        <a class="btn" href="https://www.linkedin.com/in/steffin-k-nelson" target="_blank" rel="noreferrer">🔗 LinkedIn</a>
+        <a class="btn" href="https://github.com/steffinnelson18-fau-erlangen-n-rnberg" target="_blank" rel="noreferrer">💻 GitHub</a>
+        <!-- Optional: add your PDF CV -->
+        <!-- <a class="btn" href="Steffin_Nelson_CV.pdf" target="_blank"> View CV</a> -->
+      </div>
+    </section>
+
+    <div class="footer">© <span id="y"></span> Steffin Kannampuzha Nelson • Erlangen, Germany</div>
+  </main>
+
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
 </html>
